@@ -59,11 +59,11 @@
 
             <!-- Age -->
             <label for="age">What is your age?</label>
-            <input type="number" id="age" class="p-2 border rounded-md" required>
+            <input type="number" min="1", max="200" id="age" class="p-2 border rounded-md" required>
 
             <!-- Height -->
-            <label for="height">What is your height? (in meters)</label>
-            <input type="number" step="0.01" id="height" class="p-2 border rounded-md" required>
+            <label for="height">What is your height? (in centimeters)</label>
+            <input type="number" min="50" max="250" step="1" id="height" class="p-2 border rounded-md" required>
 
             <!-- Weight -->
             <label for="weight">What is your weight? (in kilograms)</label>
