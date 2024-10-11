@@ -5,41 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obesity Level Estimator</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/output.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/util.css') }}">
 </head>
 
 <body class="bg-gray-100 text-gray-800">
 
     <!-- Header -->
-    <header class="bg-blue-700 text-white p-4 text-center">
-        <h1 class="text-3xl font-bold">Obesity Level Estimator</h1>
-        <p class="mt-2">Estimate your obesity level based on your eating habits and physical condition.</p>
+    <header class="bg-[--main-green] text-white p-6 text-center shadow-md">
+        <h1 class="text-4xl font-bold">Obesity Level Estimator</h1>
+        <p class="mt-2 text-lg">Estimate your obesity level based on your eating habits and physical condition.</p>
     </header>
 
     <!-- Introduction Section -->
-    <section class="container mx-auto mt-8 p-6 bg-white shadow-md rounded-lg">
-        <h2 class="text-2xl font-semibold">About this Project</h2>
-        <p class="mt-4">
+    <section class="container mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-3xl font-semibold text-[--main-green]">About this Project</h2>
+        <p class="mt-4 text-gray-600">
             This project was created using a dataset for the estimation of obesity levels based on eating habits and
             physical conditions from individuals in Mexico, Peru, and Colombia. The dataset, originally containing 2,111
-            records, was synthetically improved to 22,000 entries for a Kaggle competition, and we achieved an accuracy
+            records, was synthetically improved to 20.8k entries for a Kaggle competition, and I achieved an accuracy
             of over 90%. This tool allows you to fill in the same survey used in the research and provides an obesity
             level prediction based on machine learning.
         </p>
-        <p class="mt-4">
+        <h2>World Exploration of Obesity</h2>
+        <p class="mt-4 text-gray-600">
             Obesity is a global health issue affecting millions, and understanding your risk level can help you take
             preventive action. Our model can categorize your obesity level and provide medical advice based on your
             input. It's a great way for anyone to be more conscious of their health.
         </p>
-        <a href="your_eda_link_here" class="mt-4 inline-block text-blue-700 underline">Check out the exploratory data
+        <div class="my-4"><iframe src="./static/interactive_plot.html" width="100%" height="600px"></iframe>
+        </div>
+        <a href="https://www.kaggle.com/code/isaacadio/obesity-analysis"
+            class="mt-4 inline-block text-[--main-orange] underline">Check out the exploratory data
             analysis (EDA)</a>
     </section>
 
     <!-- Fun Facts Section -->
-    <section class="container mx-auto mt-8 p-6 bg-gray-50 shadow-md rounded-lg">
-        <h2 class="text-2xl font-semibold">Fun Facts about Obesity</h2>
-        <ul class="mt-4 list-disc list-inside">
-            <li>Obesity is defined by a body mass index (BMI) of 30 or higher.</li>
+    <section class="container mx-auto mt-8 p-6 bg-[--main-green] bg-opacity-10 shadow-md rounded-lg">
+        <h2 class="text-2xl font-semibold text-[--orange-light]">Fun Facts about Obesity</h2>
+        <ul class="mt-4 list-disc list-inside text-gray-100">
+            <li>Obesity is one of the leading risk factors for early death</li>
             <li>Globally, more people are obese than underweight, a trend observed in every region except sub-Saharan
                 Africa and Asia.</li>
             <li>Increased urbanization and sedentary lifestyles have contributed to the rise of obesity worldwide.</li>
@@ -47,45 +52,47 @@
     </section>
 
     <!-- Form Section -->
-    <section class="container mx-auto mt-8 p-6 bg-white shadow-md rounded-lg">
-        <h2 class="text-2xl font-semibold mb-6">Take the Survey</h2>
+    <section class="container max-w-xl mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg">
+        <h2 class="text-2xl font-semibold text-[--main-green] mb-6">Take the Survey</h2>
         <form id="obesityForm" class="grid grid-cols-1 gap-4">
             <!-- Gender -->
-            <label for="gender">What is your gender?</label>
-            <select id="gender" class="p-2 border rounded-md" required>
+            <label for="gender" class="text-gray-600">What is your gender?</label>
+            <select id="gender" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
             </select>
 
             <!-- Age -->
-            <label for="age">What is your age?</label>
-            <input type="number" min="1", max="200" id="age" class="p-2 border rounded-md" required>
+            <label for="age" class="text-gray-600">What is your age?</label>
+            <input type="number" min="1" max="200" id="age" class="p-2 border border-[--main-green] rounded-md"
+                required>
 
             <!-- Height -->
-            <label for="height">What is your height? (in centimeters)</label>
-            <input type="number" min="50" max="250" step="1" id="height" class="p-2 border rounded-md" required>
+            <label for="height" class="text-gray-600">What is your height? (in centimeters)</label>
+            <input type="number" min="50" max="250" step="1" id="height"
+                class="p-2 border border-[--main-green] rounded-md" required>
 
             <!-- Weight -->
-            <label for="weight">What is your weight? (in kilograms)</label>
-            <input type="number" id="weight" class="p-2 border rounded-md" required>
+            <label for="weight" class="text-gray-600">What is your weight? (in kilograms)</label>
+            <input type="number" id="weight" class="p-2 border border-[--main-green] rounded-md" required>
 
             <!-- Family History of Overweight -->
-            <label for="familyHistory">Has a family member suffered from overweight?</label>
-            <select id="familyHistory" class="p-2 border rounded-md" required>
+            <label for="familyHistory" class="text-gray-600">Has a family member suffered from overweight?</label>
+            <select id="familyHistory" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
 
             <!-- High Caloric Food -->
-            <label for="caloricFood">Do you eat high caloric food frequently?</label>
-            <select id="caloricFood" class="p-2 border rounded-md" required>
+            <label for="caloricFood" class="text-gray-600">Do you eat high caloric food frequently?</label>
+            <select id="caloricFood" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
 
             <!-- Vegetable Consumption -->
             <label for="vegetableConsumption">Do you usually eat vegetables in your meals?</label>
-            <select id="vegetableConsumption" class="p-2 border rounded-md" required>
+            <select id="vegetableConsumption" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Never">Never</option>
                 <option value="Sometimes">Sometimes</option>
                 <option value="Always">Always</option>
@@ -93,7 +100,7 @@
 
             <!-- Number of Main Meals -->
             <label for="mainMeals">How many main meals do you have daily?</label>
-            <select id="mainMeals" class="p-2 border rounded-md" required>
+            <select id="mainMeals" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="1-2">Between 1 and 2</option>
                 <option value="3">Three</option>
                 <option value="More than 3">More than three</option>
@@ -101,7 +108,7 @@
 
             <!-- Food Between Meals -->
             <label for="betweenMeals">Do you eat any food between meals?</label>
-            <select id="betweenMeals" class="p-2 border rounded-md" required>
+            <select id="betweenMeals" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="No">No</option>
                 <option value="Sometimes">Sometimes</option>
                 <option value="Frequently">Frequently</option>
@@ -110,14 +117,14 @@
 
             <!-- Smoking -->
             <label for="smoke">Do you smoke?</label>
-            <select id="smoke" class="p-2 border rounded-md" required>
+            <select id="smoke" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
 
             <!-- Water Consumption -->
             <label for="water">How much water do you drink daily?</label>
-            <select id="water" class="p-2 border rounded-md" required>
+            <select id="water" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Less than 1 liter">Less than a liter</option>
                 <option value="1-2 liters">Between 1 and 2 liters</option>
                 <option value="More than 2 liters">More than 2 liters</option>
@@ -125,14 +132,14 @@
 
             <!-- Calorie Monitoring -->
             <label for="calorieMonitor">Do you monitor the calories you eat daily?</label>
-            <select id="calorieMonitor" class="p-2 border rounded-md" required>
+            <select id="calorieMonitor" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
 
             <!-- Physical Activity -->
             <label for="physicalActivity">How often do you have physical activity?</label>
-            <select id="physicalActivity" class="p-2 border rounded-md" required>
+            <select id="physicalActivity" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="None">I do not have</option>
                 <option value="1-2 days">1 or 2 days</option>
                 <option value="2-4 days">2 to 4 days</option>
@@ -142,7 +149,7 @@
             <!-- Technology Usage -->
             <label for="techUsage">How much time do you use technological devices such as cell phone, videogames,
                 television, computer, and others?</label>
-            <select id="techUsage" class="p-2 border rounded-md" required>
+            <select id="techUsage" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="0-2 hours">0-2 hours</option>
                 <option value="3-5 hours">3-5 hours</option>
                 <option value="More than 5 hours">More than 5 hours</option>
@@ -150,7 +157,7 @@
 
             <!-- Alcohol Consumption -->
             <label for="alcohol">How often do you drink alcohol?</label>
-            <select id="alcohol" class="p-2 border rounded-md" required>
+            <select id="alcohol" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="I do not drink">I do not drink</option>
                 <option value="Sometimes">Sometimes</option>
                 <option value="Frequently">Frequently</option>
@@ -159,7 +166,7 @@
 
             <!-- Transportation Mode -->
             <label for="transportation">Which transportation do you usually use?</label>
-            <select id="transportation" class="p-2 border rounded-md" required>
+            <select id="transportation" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Automobile">Automobile</option>
                 <option value="Motorbike">Motorbike</option>
                 <option value="Bike">Bike</option>
@@ -167,47 +174,26 @@
                 <option value="Walking">Walking</option>
             </select>
 
+
             <!-- Submit Button -->
-            <button type="submit" class="bg-blue-700 text-white p-3 rounded-md mt-4">Submit</button>
+            <button type="submit" class="btn-primary p-3 rounded-md mt-4">Submit</button>
         </form>
     </section>
 
     <!-- Results Section -->
-    <section id="results" class="container mx-auto mt-8 p-6 bg-white shadow-md rounded-lg hidden">
-        <h2 class="text-2xl font-semibold">Your Obesity Level</h2>
-        <p id="obesityCategory" class="mt-4">You fall into the category of: <strong>Loading...</strong></p>
-        <p id="medicalAdvice" class="mt-4">Medical advice: <strong>Loading...</strong></p>
+    <section id="results" class="container mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg hidden">
+        <h2 class="text-2xl font-semibold text-[--main-green]">Your Obesity Level</h2>
+        <p id="obesityCategory" class="mt-4 text-gray-600">You fall into the category of: <strong>Loading...</strong>
+        </p>
+        <p id="medicalAdvice" class="mt-4 text-gray-600">Medical advice: <strong>Loading...</strong></p>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-700 text-white p-4 text-center mt-8">
+    <footer class="bg-[--main-green] text-white p-4 text-center mt-8 shadow-md">
         <p>© 2024 Obesity Level Estimator | Built with a passion for health and data science</p>
     </footer>
 
-    <!-- Script to simulate model response -->
-    <script>
-        const form = document.getElementById('obesityForm');
-        const resultsSection = document.getElementById('results');
-        const obesityCategory = document.getElementById('obesityCategory');
-        const medicalAdvice = document.getElementById('medicalAdvice');
-
-        form.addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            // Simulating model response
-            const randomCategory = ['Normal Weight', 'Overweight Level I', 'Obesity Type I'][Math.floor(Math.random() * 3)];
-            const advice = {
-                'Normal Weight': 'Maintain a balanced diet and regular exercise to keep your weight in check.',
-                'Overweight Level I': 'Consider reducing caloric intake and increasing physical activity.',
-                'Obesity Type I': 'Seek professional medical advice to manage your weight effectively.'
-            };
-
-            // Display the results
-            obesityCategory.textContent = `You fall into the category of: ${randomCategory}`;
-            medicalAdvice.textContent = `Medical advice: ${advice[randomCategory]}`;
-            resultsSection.classList.remove('hidden');
-        });
-    </script>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
 </body>
 
 </html>

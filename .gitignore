@@ -21,3 +21,4 @@ build/
 # Sensitive data
 secrets.py
 config.py
+node_modules

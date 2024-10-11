@@ -1,0 +1,28 @@
+:root {
+    --main-green: #1d5946;
+    --main-orange: #d9501a;
+    --green-light: #59d6a6;
+    --orange-light: #e58c68;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-primary {
+    background-color: var(--main-green);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--green-light);
+}
+
+.btn-secondary {
+    background-color: var(--main-orange);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: var(--orange-light);
+}
