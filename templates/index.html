@@ -19,41 +19,55 @@
 
     <!-- Introduction Section -->
     <section class="container mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg">
-        <h2 class="text-3xl font-semibold text-[--main-green]">About this Project</h2>
-        <p class="mt-4 text-gray-600">
-            This project was created using a dataset for the estimation of obesity levels based on eating habits and
-            physical conditions from individuals in Mexico, Peru, and Colombia. The dataset, originally containing 2,111
-            records, was synthetically improved to 20.8k entries for a Kaggle competition, and I achieved an accuracy
-            of over 90%. This tool allows you to fill in the same survey used in the research and provides an obesity
-            level prediction based on machine learning.
+        <h2 class="text-2xl font-semibold text-[--main-green]">Obesity: A Growing Global Health Challenge</h2>
+
+        <p class="text-base text-slate-900">Obesity has become a <strong>critical health issue</strong>
+            worldwide, linked to chronic diseases such as <em>diabetes, heart disease, and certain cancers</em>. With
+            obesity rates rising in nearly every country, it's essential to understand the factors driving this trend.
         </p>
-        <h2>World Exploration of Obesity</h2>
-        <p class="mt-4 text-gray-600">
-            Obesity is a global health issue affecting millions, and understanding your risk level can help you take
-            preventive action. Our model can categorize your obesity level and provide medical advice based on your
-            input. It's a great way for anyone to be more conscious of their health.
-        </p>
-        <div class="my-4"><iframe src="./static/interactive_plot.html" width="100%" height="600px"></iframe>
+
+        <p class="text-base text-slate-900">The chart below from my analysis, based on <strong>World Health Organization
+                (2024)</strong> data processed by <em>My World in Data</em>, highlights this alarming global trend. But
+            it raises an important question:</p>
+
+        <div class="my-4">
+            <iframe src="./static/interactive_plot.html" width="100%" height="600px"></iframe>
         </div>
-        <a href="https://www.kaggle.com/code/isaacadio/obesity-analysis"
-            class="mt-4 inline-block text-[--main-orange] underline">Check out the exploratory data
-            analysis (EDA)</a>
+
+        <h2 class="text-2xl font-semibold text-[--main-green]">What's Behind This Increase?</h2>
+        <p class="text-base text-slate-900">
+            My analysis explores the daily habits and lifestyle choices contributing to obesity.
+            <a href="https://www.kaggle.com/code/isaacadio/obesity-analysis" class="text-[--main-orange] underline">
+                <strong>Check out the full EDA here!</strong>
+            </a>
+        </p>
+
+        <h2 class="text-2xl font-semibold text-[--main-green] mt-8">Test the AI Model: Find Out Your Obesity Risk</h2>
+
+        <p class="text-base text-slate-800">Want to know where you stand? Based on your daily habits, My AI
+            model can help determine your obesity risk level and provide personalized recommendations. Simply fill out
+            the form below:</p>
     </section>
 
     <!-- Fun Facts Section -->
     <section class="container mx-auto mt-8 p-6 bg-[--main-green] bg-opacity-10 shadow-md rounded-lg">
-        <h2 class="text-2xl font-semibold text-[--orange-light]">Fun Facts about Obesity</h2>
-        <ul class="mt-4 list-disc list-inside text-gray-100">
-            <li>Obesity is one of the leading risk factors for early death</li>
-            <li>Globally, more people are obese than underweight, a trend observed in every region except sub-Saharan
-                Africa and Asia.</li>
-            <li>Increased urbanization and sedentary lifestyles have contributed to the rise of obesity worldwide.</li>
+        <h2 class="text-2xl font-semibold text-[--main-orange]">Fun Facts about Obesity</h2>
+        <ul>
+            <li>Over <strong>390 million children and adolescents</strong> aged 5–19 were overweight in 2022, including <strong>160 million</strong> living with obesity.</li>
+            <li><strong>1 in 8 people</strong> globally were living with obesity in 2022.</li>
+            <li>In 2022, <strong>37 million children under 5</strong> were overweight.</li>
+            <li><strong>43% of adults</strong> aged 18 and over were overweight, and <strong>16%</strong> were living with obesity in 2022.</li>
+            <li><strong>Adult obesity</strong> has more than doubled since 1990, while adolescent obesity has <strong>quadrupled</strong>.</li>
+            <li>In 2022, <strong>2.5 billion adults</strong> were overweight, with <strong>890 million</strong> living with obesity.</li>
         </ul>
+          
     </section>
 
     <!-- Form Section -->
     <section class="container max-w-xl mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg">
         <h2 class="text-2xl font-semibold text-[--main-green] mb-6">Take the Survey</h2>
+        <p class="text-base text-slate-900"><em>Note: None of your input is saved for further use. Your privacy
+            is important to us.</em></p>
         <form id="obesityForm" class="grid grid-cols-1 gap-4">
             <!-- Gender -->
             <label for="gender" class="text-gray-600">What is your gender?</label>
@@ -187,6 +201,10 @@
         </p>
         <p id="medicalAdvice" class="mt-4 text-gray-600">Medical advice: <strong>Loading...</strong></p>
     </section>
+
+    <p class="text-base text-slate-900">If you found this helpful, feel free to <a href="https://linkedin.com/in/isaac-adio"
+        class="text-[--main-orange]"><strong>check out the LinkedIn
+                post</strong></a>, and don't forget to like, repost, or share your thoughts in the comments!</p>
 
     <!-- Footer -->
     <footer class="bg-[--main-green] text-white p-4 text-center mt-8 shadow-md">
