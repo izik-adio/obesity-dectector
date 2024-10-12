@@ -12,13 +12,13 @@
 <body class="bg-gray-100 text-gray-800">
 
     <!-- Header -->
-    <header class="bg-[--main-green] text-white p-6 text-center shadow-md">
+    <header class="bg-[--main-green] text-white p-6 text-center shadow-sm">
         <h1 class="text-4xl font-bold">Obesity Level Estimator</h1>
         <p class="mt-2 text-lg">Estimate your obesity level based on your eating habits and physical condition.</p>
     </header>
 
     <!-- Introduction Section -->
-    <section class="container mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg">
+    <section class="container mx-auto mt-8 p-6 bg-white bg-opacity-15 shadow-sm rounded-lg">
         <h2 class="text-2xl font-semibold text-[--main-green]">Obesity: A Growing Global Health Challenge</h2>
 
         <p class="text-base text-slate-900">Obesity has become a <strong>critical health issue</strong>
@@ -34,40 +34,48 @@
             <iframe src="./static/interactive_plot.html" width="100%" height="600px"></iframe>
         </div>
 
+
+    </section>
+
+    <section class="container mx-auto mt-8 p-6 bg-white bg-opacity-15 shadow-sm rounded-lg">
         <h2 class="text-2xl font-semibold text-[--main-green]">What's Behind This Increase?</h2>
-        <p class="text-base text-slate-900">
+        <!-- Fun facts -->
+        <h2 class="indent-4 text-xl font-semibold text-[--main-orange]">Fun Facts about Obesity</h2>
+        <ul class="indent-8 list-disc list-inside space-y-3 text-gray-950">
+            <li>Over <strong class="text-[--main-green]">390 million children and adolescents</strong> aged 5–19 were
+                overweight in 2022, including <strong class="text-[--main-orange]">160 million</strong> living with
+                obesity.</li>
+            <li><strong class="text-[--main-green]">1 in 8 people</strong> globally were living with obesity in 2022.
+            </li>
+            <li>In 2022, <strong class="text-[--main-orange]">37 million children under 5</strong> were overweight.</li>
+            <li><strong class="text-[--main-green]">43% of adults</strong> aged 18 and over were overweight, and <strong
+                    class="text-[--main-orange]">16%</strong> were living with obesity in 2022.</li>
+            <li><strong class="text-[--main-green]">Adult obesity</strong> has more than doubled since 1990, while
+                adolescent obesity has <strong class="text-[--main-orange]">quadrupled</strong>.</li>
+            <li>In 2022, <strong class="text-[--main-green]">2.5 billion adults</strong> were overweight, with <strong
+                    class="text-[--main-orange]">890 million</strong> living with obesity.</li>
+        </ul>
+
+        <p class="indent-4 text-base text-slate-900">
             My analysis explores the daily habits and lifestyle choices contributing to obesity.
             <a href="https://www.kaggle.com/code/isaacadio/obesity-analysis" class="text-[--main-orange] underline">
                 <strong>Check out the full EDA here!</strong>
             </a>
         </p>
 
-        <h2 class="text-2xl font-semibold text-[--main-green] mt-8">Test the AI Model: Find Out Your Obesity Risk</h2>
-
-        <p class="text-base text-slate-800">Want to know where you stand? Based on your daily habits, My AI
+        <h2 class="indent-4 text-xl font-semibold text-[--main-green] mt-8">Test the AI Model: Find Out Your Obesity
+            Risk</h2>
+        <p class="indent-8 text-base text-slate-800">Want to know where you stand? Based on your daily habits, My AI
             model can help determine your obesity risk level and provide personalized recommendations. Simply fill out
             the form below:</p>
     </section>
 
-    <!-- Fun Facts Section -->
-    <section class="container mx-auto mt-8 p-6 bg-[--main-green] bg-opacity-10 shadow-md rounded-lg">
-        <h2 class="text-2xl font-semibold text-[--main-orange]">Fun Facts about Obesity</h2>
-        <ul>
-            <li>Over <strong>390 million children and adolescents</strong> aged 5–19 were overweight in 2022, including <strong>160 million</strong> living with obesity.</li>
-            <li><strong>1 in 8 people</strong> globally were living with obesity in 2022.</li>
-            <li>In 2022, <strong>37 million children under 5</strong> were overweight.</li>
-            <li><strong>43% of adults</strong> aged 18 and over were overweight, and <strong>16%</strong> were living with obesity in 2022.</li>
-            <li><strong>Adult obesity</strong> has more than doubled since 1990, while adolescent obesity has <strong>quadrupled</strong>.</li>
-            <li>In 2022, <strong>2.5 billion adults</strong> were overweight, with <strong>890 million</strong> living with obesity.</li>
-        </ul>
-          
-    </section>
-
     <!-- Form Section -->
-    <section class="container max-w-xl mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg">
+    <section class="container max-w-xl mx-auto mt-8 p-6 bg-white shadow-md rounded-lg">
+
         <h2 class="text-2xl font-semibold text-[--main-green] mb-6">Take the Survey</h2>
         <p class="text-base text-slate-900"><em>Note: None of your input is saved for further use. Your privacy
-            is important to us.</em></p>
+                is important to us.</em></p>
         <form id="obesityForm" class="grid grid-cols-1 gap-4">
             <!-- Gender -->
             <label for="gender" class="text-gray-600">What is your gender?</label>
@@ -202,12 +210,12 @@
         <p id="medicalAdvice" class="mt-4 text-gray-600">Medical advice: <strong>Loading...</strong></p>
     </section>
 
-    <p class="text-base text-slate-900">If you found this helpful, feel free to <a href="https://linkedin.com/in/isaac-adio"
-        class="text-[--main-orange]"><strong>check out the LinkedIn
+    <p class="text-base text-slate-900 text-center mt-3">If you found this helpful, feel free to <a
+            href="https://linkedin.com/in/isaac-adio" class="text-[--main-orange]"><strong>check out the LinkedIn
                 post</strong></a>, and don't forget to like, repost, or share your thoughts in the comments!</p>
 
     <!-- Footer -->
-    <footer class="bg-[--main-green] text-white p-4 text-center mt-8 shadow-md">
+    <footer class="bg-[--main-green] text-white p-4 text-center mt-6 shadow-md">
         <p>© 2024 Obesity Level Estimator | Built with a passion for health and data science</p>
     </footer>
 
