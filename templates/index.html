@@ -37,11 +37,12 @@
 
     </section>
 
+    <!-- facts section -->
     <section class="container mx-auto mt-8 p-6 bg-white bg-opacity-15 shadow-sm rounded-lg">
         <h2 class="text-2xl font-semibold text-[--main-green]">What's Behind This Increase?</h2>
         <!-- Fun facts -->
-        <h2 class="indent-4 text-xl font-semibold text-[--main-orange]">Fun Facts about Obesity</h2>
-        <ul class="indent-8 list-disc list-inside space-y-3 text-gray-950">
+        <h2 class="ml-4 text-xl font-semibold text-[--main-orange]">Fun Facts about Obesity</h2>
+        <ul class="ml-8 list-disc list-inside space-y-3 text-gray-950">
             <li>Over <strong class="text-[--main-green]">390 million children and adolescents</strong> aged 5–19 were
                 overweight in 2022, including <strong class="text-[--main-orange]">160 million</strong> living with
                 obesity.</li>
@@ -56,16 +57,16 @@
                     class="text-[--main-orange]">890 million</strong> living with obesity.</li>
         </ul>
 
-        <p class="indent-4 text-base text-slate-900">
+        <p class="ml-4 text-base text-slate-900">
             My analysis explores the daily habits and lifestyle choices contributing to obesity.
             <a href="https://www.kaggle.com/code/isaacadio/obesity-analysis" class="text-[--main-orange] underline">
                 <strong>Check out the full EDA here!</strong>
             </a>
         </p>
 
-        <h2 class="indent-4 text-xl font-semibold text-[--main-green] mt-8">Test the AI Model: Find Out Your Obesity
+        <h2 class="ml-4 text-xl font-semibold text-[--main-green] mt-8">Test the AI Model: Find Out Your Obesity
             Risk</h2>
-        <p class="indent-8 text-base text-slate-800">Want to know where you stand? Based on your daily habits, My AI
+        <p class="ml-8 text-base text-slate-800">Want to know where you stand? Based on your daily habits, My AI
             model can help determine your obesity risk level and provide personalized recommendations. Simply fill out
             the form below:</p>
     </section>
@@ -73,48 +74,49 @@
     <!-- Form Section -->
     <section class="container max-w-xl mx-auto mt-8 p-6 bg-white shadow-md rounded-lg">
 
-        <h2 class="text-2xl font-semibold text-[--main-green] mb-6">Take the Survey</h2>
-        <p class="text-base text-slate-900"><em>Note: None of your input is saved for further use. Your privacy
+        <h2 class="text-2xl font-semibold text-[--main-green] mb-4">Take the Survey</h2>
+        <p class="text-base font-bold mb-2 text-[--orange-light]"><em>Note: None of your input is saved for further use. Your privacy
                 is important to us.</em></p>
+
         <form id="obesityForm" class="grid grid-cols-1 gap-4">
             <!-- Gender -->
             <label for="gender" class="text-gray-600">What is your gender?</label>
-            <select id="gender" class="p-2 border border-[--main-green] rounded-md" required>
+            <select name="gender" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
             </select>
 
             <!-- Age -->
             <label for="age" class="text-gray-600">What is your age?</label>
-            <input type="number" min="1" max="200" id="age" class="p-2 border border-[--main-green] rounded-md"
+            <input type="number" min="1" max="200" name="age" class="p-2 border border-[--main-green] rounded-md"
                 required>
 
             <!-- Height -->
             <label for="height" class="text-gray-600">What is your height? (in centimeters)</label>
-            <input type="number" min="50" max="250" step="1" id="height"
+            <input type="number" min="50" max="250" step="1" name="height"
                 class="p-2 border border-[--main-green] rounded-md" required>
 
             <!-- Weight -->
             <label for="weight" class="text-gray-600">What is your weight? (in kilograms)</label>
-            <input type="number" id="weight" class="p-2 border border-[--main-green] rounded-md" required>
+            <input type="number" name="weight" class="p-2 border border-[--main-green] rounded-md" required>
 
             <!-- Family History of Overweight -->
             <label for="familyHistory" class="text-gray-600">Has a family member suffered from overweight?</label>
-            <select id="familyHistory" class="p-2 border border-[--main-green] rounded-md" required>
+            <select name="familyHistory" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
 
             <!-- High Caloric Food -->
             <label for="caloricFood" class="text-gray-600">Do you eat high caloric food frequently?</label>
-            <select id="caloricFood" class="p-2 border border-[--main-green] rounded-md" required>
+            <select name="caloricFood" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
 
             <!-- Vegetable Consumption -->
             <label for="vegetableConsumption">Do you usually eat vegetables in your meals?</label>
-            <select id="vegetableConsumption" class="p-2 border border-[--main-green] rounded-md" required>
+            <select name="vegetableConsumption" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Never">Never</option>
                 <option value="Sometimes">Sometimes</option>
                 <option value="Always">Always</option>
@@ -122,7 +124,7 @@
 
             <!-- Number of Main Meals -->
             <label for="mainMeals">How many main meals do you have daily?</label>
-            <select id="mainMeals" class="p-2 border border-[--main-green] rounded-md" required>
+            <select name="mainMeals" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="1-2">Between 1 and 2</option>
                 <option value="3">Three</option>
                 <option value="More than 3">More than three</option>
@@ -130,7 +132,7 @@
 
             <!-- Food Between Meals -->
             <label for="betweenMeals">Do you eat any food between meals?</label>
-            <select id="betweenMeals" class="p-2 border border-[--main-green] rounded-md" required>
+            <select name="betweenMeals" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="No">No</option>
                 <option value="Sometimes">Sometimes</option>
                 <option value="Frequently">Frequently</option>
@@ -139,14 +141,14 @@
 
             <!-- Smoking -->
             <label for="smoke">Do you smoke?</label>
-            <select id="smoke" class="p-2 border border-[--main-green] rounded-md" required>
+            <select name="smoke" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
 
             <!-- Water Consumption -->
             <label for="water">How much water do you drink daily?</label>
-            <select id="water" class="p-2 border border-[--main-green] rounded-md" required>
+            <select name="water" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Less than 1 liter">Less than a liter</option>
                 <option value="1-2 liters">Between 1 and 2 liters</option>
                 <option value="More than 2 liters">More than 2 liters</option>
@@ -154,14 +156,14 @@
 
             <!-- Calorie Monitoring -->
             <label for="calorieMonitor">Do you monitor the calories you eat daily?</label>
-            <select id="calorieMonitor" class="p-2 border border-[--main-green] rounded-md" required>
+            <select name="calorieMonitor" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
             </select>
 
             <!-- Physical Activity -->
             <label for="physicalActivity">How often do you have physical activity?</label>
-            <select id="physicalActivity" class="p-2 border border-[--main-green] rounded-md" required>
+            <select name="physicalActivity" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="None">I do not have</option>
                 <option value="1-2 days">1 or 2 days</option>
                 <option value="2-4 days">2 to 4 days</option>
@@ -171,7 +173,7 @@
             <!-- Technology Usage -->
             <label for="techUsage">How much time do you use technological devices such as cell phone, videogames,
                 television, computer, and others?</label>
-            <select id="techUsage" class="p-2 border border-[--main-green] rounded-md" required>
+            <select name="techUsage" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="0-2 hours">0-2 hours</option>
                 <option value="3-5 hours">3-5 hours</option>
                 <option value="More than 5 hours">More than 5 hours</option>
@@ -179,7 +181,7 @@
 
             <!-- Alcohol Consumption -->
             <label for="alcohol">How often do you drink alcohol?</label>
-            <select id="alcohol" class="p-2 border border-[--main-green] rounded-md" required>
+            <select name="alcohol" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="I do not drink">I do not drink</option>
                 <option value="Sometimes">Sometimes</option>
                 <option value="Frequently">Frequently</option>
@@ -188,7 +190,7 @@
 
             <!-- Transportation Mode -->
             <label for="transportation">Which transportation do you usually use?</label>
-            <select id="transportation" class="p-2 border border-[--main-green] rounded-md" required>
+            <select name="transportation" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="Automobile">Automobile</option>
                 <option value="Motorbike">Motorbike</option>
                 <option value="Bike">Bike</option>
@@ -208,6 +210,8 @@
         <p id="obesityCategory" class="mt-4 text-gray-600">You fall into the category of: <strong>Loading...</strong>
         </p>
         <p id="medicalAdvice" class="mt-4 text-gray-600">Medical advice: <strong>Loading...</strong></p>
+        <p id="formdata">
+        </p>
     </section>
 
     <p class="text-base text-slate-900 text-center mt-3">If you found this helpful, feel free to <a

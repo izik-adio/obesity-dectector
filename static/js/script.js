@@ -4,19 +4,27 @@ const obesityCategory = document.getElementById('obesityCategory');
 
 const medicalAdvice = document.getElementById('medicalAdvice');
 
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from refreshing the page
+    
+    let formData = new FormData(this);
+    
+    // Sending form data to Flask using fetch API (AJAX)
+    fetch('/', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())  // Expecting JSON response from Flask
+    .then(data => {
+        // Display the result inside the 'result' div
+        document.getElementById('formdata').innerHTML = `
+            <h3 class="text-xl font-semibold">Form Data Submitted</h3>
+            <ul>
+                ${Object.entries(data).map(([key, value]) => `<li><strong>${key}:</strong> ${value}</li>`).join('')}
+            </ul>
+        `;
+        resultsSection.classList.toggle("hidden")
+    })
 
-    // Simulating model response
-    const randomCategory = ['Normal Weight', 'Overweight Level I', 'Obesity Type I'][Math.floor(Math.random() * 3)];
-    const advice = {
-        'Normal Weight': 'Maintain a balanced diet and regular exercise to keep your weight in check.',
-        'Overweight Level I': 'Consider reducing caloric intake and increasing physical activity.',
-        'Obesity Type I': 'Seek professional medical advice to manage your weight effectively.'
-    };
-
-    // Display the results
-    obesityCategory.textContent = `You fall into the category of: ${randomCategory}`;
-    medicalAdvice.textContent = `Medical advice: ${advice[randomCategory]}`;
-    resultsSection.classList.remove('hidden');
+    .catch(error => console.error('Error:', error));
 });
