@@ -72,10 +72,11 @@
     </section>
 
     <!-- Form Section -->
-    <section class="container max-w-xl mx-auto mt-8 p-6 bg-white shadow-md rounded-lg">
+    <section id="formSection" class="container max-w-xl mx-auto mt-8 p-6 bg-white shadow-md rounded-lg">
 
         <h2 class="text-2xl font-semibold text-[--main-green] mb-4">Take the Survey</h2>
-        <p class="text-base font-bold mb-2 text-[--orange-light]"><em>Note: None of your input is saved for further use. Your privacy
+        <p class="text-base font-bold mb-2 text-[--orange-light]"><em>Note: None of your input is saved for further use.
+                Your privacy
                 is important to us.</em></p>
 
         <form id="obesityForm" class="grid grid-cols-1 gap-4">
@@ -103,37 +104,37 @@
             <!-- Family History of Overweight -->
             <label for="familyHistory" class="text-gray-600">Has a family member suffered from overweight?</label>
             <select name="familyHistory" class="p-2 border border-[--main-green] rounded-md" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
             </select>
 
             <!-- High Caloric Food -->
             <label for="caloricFood" class="text-gray-600">Do you eat high caloric food frequently?</label>
             <select name="caloricFood" class="p-2 border border-[--main-green] rounded-md" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
             </select>
 
             <!-- Vegetable Consumption -->
             <label for="vegetableConsumption">Do you usually eat vegetables in your meals?</label>
             <select name="vegetableConsumption" class="p-2 border border-[--main-green] rounded-md" required>
-                <option value="Never">Never</option>
-                <option value="Sometimes">Sometimes</option>
-                <option value="Always">Always</option>
+                <option value="never">Never</option>
+                <option value="sometime">Sometimes</option>
+                <option value="always">Always</option>
             </select>
 
             <!-- Number of Main Meals -->
             <label for="mainMeals">How many main meals do you have daily?</label>
             <select name="mainMeals" class="p-2 border border-[--main-green] rounded-md" required>
-                <option value="1-2">Between 1 and 2</option>
-                <option value="3">Three</option>
-                <option value="More than 3">More than three</option>
+                <option value="<3">Between 1 and 2</option>
+                <option value="=3">Three</option>
+                <option value=">3">More than three</option>
             </select>
 
             <!-- Food Between Meals -->
             <label for="betweenMeals">Do you eat any food between meals?</label>
             <select name="betweenMeals" class="p-2 border border-[--main-green] rounded-md" required>
-                <option value="No">No</option>
+                <option value="no">No</option>
                 <option value="Sometimes">Sometimes</option>
                 <option value="Frequently">Frequently</option>
                 <option value="Always">Always</option>
@@ -142,32 +143,32 @@
             <!-- Smoking -->
             <label for="smoke">Do you smoke?</label>
             <select name="smoke" class="p-2 border border-[--main-green] rounded-md" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
             </select>
 
             <!-- Water Consumption -->
             <label for="water">How much water do you drink daily?</label>
             <select name="water" class="p-2 border border-[--main-green] rounded-md" required>
-                <option value="Less than 1 liter">Less than a liter</option>
+                <option value="<1 liter">Less than a liter</option>
                 <option value="1-2 liters">Between 1 and 2 liters</option>
-                <option value="More than 2 liters">More than 2 liters</option>
+                <option value=">2 liters">More than 2 liters</option>
             </select>
 
             <!-- Calorie Monitoring -->
             <label for="calorieMonitor">Do you monitor the calories you eat daily?</label>
             <select name="calorieMonitor" class="p-2 border border-[--main-green] rounded-md" required>
-                <option value="Yes">Yes</option>
-                <option value="No">No</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
             </select>
 
             <!-- Physical Activity -->
             <label for="physicalActivity">How often do you have physical activity?</label>
             <select name="physicalActivity" class="p-2 border border-[--main-green] rounded-md" required>
-                <option value="None">I do not have</option>
-                <option value="1-2 days">1 or 2 days</option>
-                <option value="2-4 days">2 to 4 days</option>
-                <option value="4-5 days">4 or 5 days</option>
+                <option value="I don't">I do not have</option>
+                <option value="1-2 Days">1 or 2 days</option>
+                <option value="2-4 Days">2 to 4 days</option>
+                <option value="4-5 Days">4 or 5 days</option>
             </select>
 
             <!-- Technology Usage -->
@@ -176,13 +177,13 @@
             <select name="techUsage" class="p-2 border border-[--main-green] rounded-md" required>
                 <option value="0-2 hours">0-2 hours</option>
                 <option value="3-5 hours">3-5 hours</option>
-                <option value="More than 5 hours">More than 5 hours</option>
+                <option value=">5 hours">More than 5 hours</option>
             </select>
 
             <!-- Alcohol Consumption -->
             <label for="alcohol">How often do you drink alcohol?</label>
             <select name="alcohol" class="p-2 border border-[--main-green] rounded-md" required>
-                <option value="I do not drink">I do not drink</option>
+                <option value="no">I do not drink</option>
                 <option value="Sometimes">Sometimes</option>
                 <option value="Frequently">Frequently</option>
                 <option value="Always">Always</option>
@@ -194,7 +195,7 @@
                 <option value="Automobile">Automobile</option>
                 <option value="Motorbike">Motorbike</option>
                 <option value="Bike">Bike</option>
-                <option value="Public Transportation">Public Transportation</option>
+                <option value="Public_Transportation">Public Transportation</option>
                 <option value="Walking">Walking</option>
             </select>
 
@@ -206,17 +207,30 @@
 
     <!-- Results Section -->
     <section id="results" class="container mx-auto mt-8 p-6 bg-white shadow-lg rounded-lg hidden">
-        <h2 class="text-2xl font-semibold text-[--main-green]">Your Obesity Level</h2>
-        <p id="obesityCategory" class="mt-4 text-gray-600">You fall into the category of: <strong>Loading...</strong>
+        <h2 class="text-3xl font-bold text-[--main-green] text-center mb-3">Your Obesity Level</h2>
+        <p class="text-2xl font-semibold text-gray-800">
+            You fall into the category of: <span id="obesityCategory" class="text-[--main-orange]"> </span>
         </p>
-        <p id="medicalAdvice" class="mt-4 text-gray-600">Medical advice: <strong>Loading...</strong></p>
-        <p id="formdata">
+        <p class="mt-4 font-bold text-gray-800 leading-relaxed">
+            Medical advice: <em id="medicalAdvice" class="text-slate-400"></em>
         </p>
+        <p>
+            <span id="reference" class="mt-6 text-sm">
+                Learn more at
+            </span>
+            <a id="reference_link" href="https://www.google.com" target="_blank"
+                class="inline text-[--main-orange] underline">
+                https://www.google.com </a>
+        </p>
+
+        <br>
+        <p class="container text-base text-slate-800 text-center mt-3">If you found this helpful, feel free to <a
+                href="https://linkedin.com/in/isaac-adio" class="text-[--main-orange]"><em>check out the LinkedIn
+                    post</em></a>, and don't forget to like, repost, or share your thoughts in the comments!</p>
+
     </section>
 
-    <p class="text-base text-slate-900 text-center mt-3">If you found this helpful, feel free to <a
-            href="https://linkedin.com/in/isaac-adio" class="text-[--main-orange]"><strong>check out the LinkedIn
-                post</strong></a>, and don't forget to like, repost, or share your thoughts in the comments!</p>
+
 
     <!-- Footer -->
     <footer class="bg-[--main-green] text-white p-4 text-center mt-6 shadow-md">
