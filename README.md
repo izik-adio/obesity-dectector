@@ -4,8 +4,8 @@
 
 This project leverages machine learning to predict obesity levels in individuals based on a set of survey responses about their eating habits and physical conditions. It's designed to raise awareness about obesity and help users better understand their health status.
 
-🚀 **Live Website**: [Visit Obesity Estimator](#)  
-📊 **Kaggle Notebook**: [Explore the Kaggle Notebook](https://www.kaggle.com/code/isaacadio/obesity-analysis)  
+🚀 **Live Website**: [Visit Obesity Estimator](https://obesity-dectector.onrender.com/)  
+📊 **Kaggle Notebook**: [Explore the Kaggle Notebook](./obesity-analysis.ipynb)  
 🔗 **Kaggle Live Link**: [View on Kaggle](https://www.kaggle.com/code/isaacadio/obesity-analysis)
 
 ## 📖 Overview
@@ -22,7 +22,7 @@ Built with **Flask** and styled using **Tailwind CSS**, this web application is 
 - **Machine Learning** model built using **scikit-learn**
 
 ### How to Run Locally:
-1. Clone the repo: `git clone https://github.com/yourusername/obesity-level-estimator.git`
+1. Clone the repo: `https://github.com/izik-adio/obesity-dectector.git`
 2. Install dependencies: `pip install -r requirements.txt`
 3. Run the app: `flask run`
 
