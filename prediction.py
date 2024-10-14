@@ -143,5 +143,4 @@ def advice(form_data):
     llm_chain = advice_prompt | llm
     response = llm_chain.invoke({"form_data": form_data})
     content = response.content.replace("```", "").replace("json", "").strip()
-    print(content)
     return content

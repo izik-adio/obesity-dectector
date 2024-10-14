@@ -8,21 +8,16 @@ const innerLink = document.getElementById('reference_link');
 
 
 // Function to populate the results section
-function populateResults(response) {
-    // Update the obesity category
-    obesityCategory.innerHTML = response.obesityCategory;
-    
-    // Update the medical advice
-    medicalAdvice.innerText = response.advice;
-
-    // Update the reference link
-    reference.innerText = response.reference;
-    innerLink.href = response.reference_link;
-    innerLink.innerText = response.reference_link;
-    
-    // Make the results section visible
+function populateResults(data) {
+    // Continue with updating the UI
+    obesityCategory.innerHTML = data["obesityCategory"];
+    medicalAdvice.innerHTML = data["advice"];
+    reference.innerHTML = data["reference"];
+    innerLink.href = data["reference_link"];
+    innerLink.innerHTML = data["reference_link"];
     resultsSection.classList.remove('hidden');
 }
+
 
 form.addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form from refreshing the page
@@ -34,9 +29,9 @@ form.addEventListener('submit', function(event) {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())  // Expecting JSON response from Flask
+    .then(response => response.json())
     .then(data => {
-        populateResults(data);
+        populateResults(JSON.parse(data));
         formSection.classList.add('hidden')
     }).catch(error => console.error('Error:', error));
 });

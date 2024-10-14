@@ -32,6 +32,7 @@ def home():
         }
 
         result = jsonify(advice(form_data))
+
         return result
 
     return render_template("index.html")
