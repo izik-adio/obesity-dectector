@@ -773,6 +773,10 @@ video {
   font-weight: 700;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .font-semibold {
   font-weight: 600;
 }
@@ -808,9 +812,9 @@ video {
   color: rgb(3 7 18 / var(--tw-text-opacity));
 }
 
-.text-slate-400 {
+.text-slate-600 {
   --tw-text-opacity: 1;
-  color: rgb(148 163 184 / var(--tw-text-opacity));
+  color: rgb(71 85 105 / var(--tw-text-opacity));
 }
 
 .text-slate-800 {

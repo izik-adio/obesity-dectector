@@ -22,3 +22,4 @@ build/
 secrets.py
 config.py
 node_modules
+.env

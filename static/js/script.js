@@ -7,8 +7,6 @@ const reference = document.getElementById('reference');
 const innerLink = document.getElementById('reference_link');
 
 
-console.log(innerLink)
-
 // Function to populate the results section
 function populateResults(response) {
     // Update the obesity category
@@ -17,15 +15,10 @@ function populateResults(response) {
     // Update the medical advice
     medicalAdvice.innerText = response.advice;
 
-    const urlRegex = /(?:https?:\/\/)?[\w.-]+(?:\.[\w.-]+)*\/[\w&\?\-\+\.#\/=]*$/;
-    const text = response.reference
-    const match = urlRegex.exec(text);
-    const contentBeforeLink = text.substring(0, match.index);
-    const link = match[0];
     // Update the reference link
-    reference.innerText = contentBeforeLink;
-    innerLink.href = link;
-    innerLink.innerText = link;
+    reference.innerText = response.reference;
+    innerLink.href = response.reference_link;
+    innerLink.innerText = response.reference_link;
     
     // Make the results section visible
     resultsSection.classList.remove('hidden');
